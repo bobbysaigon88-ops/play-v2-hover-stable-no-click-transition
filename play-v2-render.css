@@ -1,0 +1,194 @@
+<style>
+.is-play-sandbox .play-card {
+  background: transparent !important;
+  outline: none !important;
+}
+
+.is-play-sandbox .play-card .card-index {
+  top: -16px;
+  left: 0;
+  z-index: 3;
+}
+
+.is-play-sandbox .play-card .card-meta {
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 3;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+
+  .is-play-sandbox .play-card .card-meta * {
+  white-space: nowrap;
+}
+  
+.is-play-sandbox .play-card .card-media {
+  top: 0 !important;
+  right: 0 !important;
+  left: 0 !important;
+  bottom: 28px !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.is-play-sandbox .play-card .image-thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: none !important;
+  transition: none !important;
+  z-index: 1;
+}
+
+.is-play-sandbox .play-card[data-ratio="portrait"] .image-thumbnail,
+.is-play-sandbox .play-card[data-ratio="portrait"] .play-hover-overlay {
+  width: 70%;
+  left: 4%;
+  right: auto;
+}
+
+.is-play-sandbox .play-card[data-ratio="portrait"] .card-meta {
+  width: 70%;
+  left: 4%;
+  right: auto;
+}
+
+.is-play-sandbox .play-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.is-play-sandbox .play-hover-title,
+.is-play-sandbox .play-title-hover-text,
+.is-play-sandbox .data-play-hover-line {
+  position: relative;
+  z-index: 3;
+}
+
+.is-play-sandbox .play-title-hover-text {
+  display: block;
+  color: #ffffff;
+  font-size: clamp(1.15rem, 1.45vw, 2rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+  max-width: 92%;
+  text-wrap: balance;
+}
+  
+  .is-play-sandbox .play-card[data-span="2"] .play-title-hover-text {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  max-width: 99%;
+  text-wrap: balance;
+}
+
+  .is-play-sandbox .play-card[data-span="6"][data-ratio="landscape"] .play-title-hover-text {
+  font-size: 2.825rem;
+  line-height: 115%;
+  letter-spacing: +0.02em;
+  max-width: 88%;
+}
+  
+  .is-play-sandbox .play-card[data-span="2"][data-ratio="portrait"] .card-meta-wrap 
+  width: 100%;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+  .is-play-sandbox .play-card[data-span="2"][data-ratio="portrait"] .card-meta-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+  width: 100%;
+}
+  
+  .is-play-sandbox .play-hover-title {
+  width: 100%;
+  max-width: 92%;
+  padding-bottom: 0.25rem;
+}
+
+.is-play-sandbox .play-title-line-clip {
+  display: block;
+  overflow: hidden;
+}
+
+.is-play-sandbox .play-title-line-inner {
+  display: block;
+  will-change: transform;
+  transform: translate3d(0, 115%, 0);
+}
+
+.is-play-sandbox .play-card.is-portrait::before,
+.is-play-sandbox .play-card[data-ratio="portrait"]::before {
+  content: none !important;
+  display: none !important;
+  background: transparent !important;
+}
+  .is-play-sandbox .play-hover-overlay {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.is-play-sandbox .play-hover-title {
+  width: 100%;
+  color: #ffffff;
+}
+
+.is-play-sandbox .play-title-hover-text {
+  display: block;
+  color: #ffffff !important;
+}
+
+.is-play-sandbox .play-title-line-clip {
+  display: block;
+  overflow: hidden;
+  min-height: 1.12em;
+}
+
+  .is-play-sandbox .play-hover-cta {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  z-index: 4;
+  pointer-events: none;
+  white-space: nowrap;
+  width: max-content;
+  text-align: center;
+  oopacity: 0.4 !important;
+  transition: opacity 0.2s ease;
+}
+  
+.is-play-sandbox .play-title-line-inner {
+  display: block;
+  color: #ffffff !important;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+</style>
